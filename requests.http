@@ -1,0 +1,73 @@
+###
+### HTTP requests to visualize the APIs
+###
+
+GET localhost:8081/organizer
+
+###
+
+GET localhost:8081/events?organizerId=101
+
+###
+
+GET localhost:8080/events/801
+
+###
+
+GET localhost:8081/events
+
+###
+
+GET localhost:8081/products
+
+###
+
+POST localhost:8080/registrations
+Content-Type: application/json
+
+{"productId": 801, "attendeeName": "Fred"}
+
+###
+
+GET localhost:8080/events/999
+
+###
+
+POST localhost:8080/registrations
+Content-Type: application/json
+
+{"attendeeName": "Jesper de Jong"}
+
+###
+GET localhost:8080/actuator
+
+###
+GET localhost:8080/actuator/health
+
+###
+GET http://localhost:8080/actuator/env
+
+###
+GET http://localhost:8080/actuator/beans
+
+###
+GET http://localhost:8080/actuator/conditions
+
+###
+GET http://localhost:8080/actuator/mappings
+
+###
+GET http://localhost:8080/actuator/loggers/org.springframework.web
+
+###
+POST http://localhost:8080/actuator/loggers/org.springframework.web
+Content-Type: application/json
+
+{ "configuredLevel": "DEBUG" }
+
+###
+GET http://localhost:8080/actuator/metrics
+
+###
+GET http://localhost:8080/actuator/metrics/http.server.requests
+
